@@ -1,0 +1,75 @@
+Enunciado
+Desenvolva um sistema de gerenciamento de uma biblioteca utilizando SQLite. O sistema deve permitir o armazenamento de informações sobre autores, livros e empréstimos. As funcionalidades incluem a criação das tabelas, inserção de dados iniciais, consultas aos autores, livros e empréstimos registrados. O sistema deve:
+
+Criar as tabelas necessárias (Autores, Livros, Emprestimos).
+Inserir autores e livros com seus respectivos detalhes.
+Registrar empréstimos de livros, incluindo informações sobre o usuário, data de empréstimo e devolução (se aplicável).
+Consultar e exibir os autores, livros e empréstimos cadastrados.
+Estrutura do projeto:
+Autores: contém informações sobre os autores dos livros.
+Livros: armazena detalhes dos livros, vinculados aos seus respectivos autores.
+Emprestimos: registra as informações sobre os empréstimos de livros, como o nome do usuário, datas de empréstimo e devolução.
+Requisitos:
+Utilize a biblioteca sqlite3 do Python para o gerenciamento do banco de dados.
+Exclua as tabelas, se já existirem, antes de criar novas instâncias.
+Execute consultas para listar todos os dados inseridos nas tabelas.
+
+# Sistema de Gerenciamento de Biblioteca
+
+Este projeto implementa um sistema de gerenciamento de biblioteca utilizando SQLite, com operações básicas de criação, inserção e consulta de dados em tabelas para autores, livros e empréstimos.
+
+## Funcionalidades
+
+- Criação das tabelas:
+  - **Autores**: Armazena o nome e nacionalidade dos autores.
+  - **Livros**: Contém detalhes dos livros, como título, ano de publicação, gênero e autor.
+  - **Empréstimos**: Registra empréstimos de livros, incluindo o nome do usuário e datas de empréstimo e devolução.
+  
+- Inserção de dados iniciais:
+  - Insere um conjunto de autores e livros com informações fictícias.
+  
+- Consultas:
+  - Consulta e exibe autores, livros e empréstimos cadastrados no banco de dados.
+
+## Requisitos
+
+- Python 3.x
+- Biblioteca `sqlite3` (inclusa no Python por padrão)
+
+## Como executar
+
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/usuario/biblioteca-sqlite.git
+    ```
+2. Acesse o diretório do projeto:
+    ```bash
+    cd biblioteca-sqlite
+    ```
+3. Execute o script Python:
+    ```bash
+    python biblioteca.py
+    ```
+
+## Estrutura do Banco de Dados
+
+- **Autores**: Armazena o nome e a nacionalidade do autor.
+  - Campos: `AutorId`, `Nome`, `Nacionalidade`
+  
+- **Livros**: Detalhes sobre os livros da biblioteca.
+  - Campos: `LivroID`, `Titulo`, `AutorID`, `AnoPublicacao`, `Genero`
+  
+- **Empréstimos**: Informações sobre os empréstimos realizados.
+  - Campos: `EmprestimoID`, `LivroID`, `DataEmprestimo`, `DataDevolucao`, `NomeUsuario`
+
+## Exemplo de Uso
+
+Após a execução, o sistema exibirá os autores, livros e empréstimos cadastrados diretamente no terminal.
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT.
