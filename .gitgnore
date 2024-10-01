@@ -1,0 +1,11 @@
+# Arquivos do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Banco de dados SQLite
+*.db
+
+# Configurações de IDEs
+.vscode/
+.idea/
